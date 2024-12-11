@@ -1,9 +1,8 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Accordion from './components/Accordian';
 import QuizApp from './components/QuizApp';
 import Todolist from './components/Todolist';
-
+import Weather from './components/Weather';
 import Signin from './components/Signin';
 
 
@@ -19,6 +18,7 @@ const App = () => {
             <Link to="/accordion" className="text-gray-700 font-semibold hover:text-indigo-600">Accordion</Link>
             <Link to="/quiz" className="text-gray-700 font-semibold hover:text-indigo-600">Quiz</Link>
             <Link to="/todo" className="text-gray-700 font-semibold hover:text-indigo-600">Todo List</Link>
+            <Link to="/weather" className="text-gray-700 font-semibold hover:text-indigo-600">Weather App</Link>
             <Link to="/signin">Login</Link>
           </div>
         </nav>
@@ -30,6 +30,7 @@ const App = () => {
           <Route path="/accordion" element={<Accordion />} />
           <Route path="/quiz" element={<QuizApp />} />
           <Route path="/todo" element={<Todolist />} />
+          <Route path="/weather" element={<Weather />} />
         </Routes>
       </div>
     </Router>
